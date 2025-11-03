@@ -1,3 +1,17 @@
 {
-  "locks": {}
+  "locks": {
+    "Get.bru": {
+      "user": "unknown",
+      "timestamp": 1762169437830
+    },
+    "bruno.json": {
+      "user": "unknown",
+      "timestamp": 1762169437830
+    },
+    ".bruno/live-activity.json": {
+      "user": "unknown",
+      "timestamp": 1762169437830
+    }
+  },
+  "lastUpdated": 1762169437831
 }
