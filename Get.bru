@@ -1,0 +1,16 @@
+meta {
+  name: Get
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://api.sampleapis.com/countries/countries
+  body: none
+  auth: none
+}
+
+script:post-response {
+  const response = res.getBody();
+  bru.setGlobalEnvVar('id', response[0].id);
+}
