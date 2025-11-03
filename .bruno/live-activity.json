@@ -2,16 +2,12 @@
   "locks": {
     "Get.bru": {
       "user": "unknown",
-      "timestamp": 1762169437830
+      "timestamp": 1762170053029
     },
-    "bruno.json": {
+    ".gitignore": {
       "user": "unknown",
-      "timestamp": 1762169437830
-    },
-    ".bruno/live-activity.json": {
-      "user": "unknown",
-      "timestamp": 1762169437830
+      "timestamp": 1762170053029
     }
   },
-  "lastUpdated": 1762169437831
+  "lastUpdated": 1762170053029
 }
