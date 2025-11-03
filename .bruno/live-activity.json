@@ -2,8 +2,12 @@
   "locks": {
     ".bruno/live-activity.json": {
       "user": "unknown",
-      "timestamp": 1762170081295
+      "timestamp": 1762170224869
+    },
+    "Get.bru": {
+      "user": "unknown",
+      "timestamp": 1762170224869
     }
   },
-  "lastUpdated": 1762170081295
+  "lastUpdated": 1762170224869
 }
