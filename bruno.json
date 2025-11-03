@@ -5,9 +5,5 @@
   "ignore": [
     "node_modules",
     ".git"
-  ],
-  "liveSync": {
-    "enabled": true,
-    "branch": "live-activity"
-  }
+  ]
 }
