@@ -11,6 +11,6 @@ get {
 }
 
 script:post-response {
-  const response = res.getBody();
+  const response = res.getBody();;
   bru.setGlobalEnvVar('id', response[0].id);
 }
