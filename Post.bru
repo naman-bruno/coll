@@ -5,7 +5,109 @@ meta {
 }
 
 post {
-  url: 
-  body: none
+  url: https://echo.usebruno.com
+  body: json
   auth: inherit
+}
+
+headers {
+  test: test
+  Forwarded: bar
+}
+
+body:json {
+  {
+    "foo": "bar",
+    "number": 123,
+    "boolean": true,
+    "array": [1, 2, 3],
+    "object": {
+      "foo": "bar"
+    }
+  }
+}
+
+script:pre-request {
+  console.log("1")
+  console.log("2")
+  console.log("3")
+}
+
+script:post-response {
+  console.log("4")
+  console.log("5")
+  console.log("6")
+}
+
+example {
+  name: example
+  
+  request: {
+    url: https://echo.usebruno.com
+    method: POST
+    mode: json
+    headers: {
+      test: test
+      Forwarded: bar
+    }
+  
+    body:json: {
+      {
+        "foo": "bar",
+        "number": 123,
+        "boolean": true,
+        "array": [1, 2, 3],
+        "object": {
+          "foo": "bar"
+        }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      server: nginx/1.24.0 (Ubuntu)
+      date: Fri, 23 Jan 2026 04:57:50 GMT
+      content-type: application/json
+      content-length: 112
+      connection: keep-alive
+      host: echo.usebruno.com:443
+      x-real-ip: 106.51.73.13
+      x-forwarded-for: 106.51.73.13
+      x-forwarded-proto: https
+      accept: application/json, text/plain, */*
+      user-agent: bruno-runtime/3.0.2
+      test: test
+      forwarded: bar
+      request-start-time: 1769144270061
+      accept-encoding: gzip, compress, deflate, br
+      strict-transport-security: max-age=63072000; includeSubdomains
+      x-frame-options: DENY
+      x-content-type-options: nosniff
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "foo": "bar",
+          "number": 123,
+          "boolean": true,
+          "array": [
+            1,
+            2,
+            3
+          ],
+          "object": {
+            "foo": "bar"
+          }
+        }
+      '''
+    }
+  }
 }
