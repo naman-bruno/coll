@@ -5,7 +5,44 @@ meta {
 }
 
 delete {
-  url: 
-  body: none
-  auth: inherit
+  url: echo.usebruno.commjkdfnsf
+  body: json
+  auth: apikey
+}
+
+headers {
+  3: 4
+  51: 61
+  5: 6
+  ~1: 2
+}
+
+auth:apikey {
+  key: test
+  value: key-changess
+  placement: header
+}
+
+body:json {
+  {
+    "foo": "bar",
+    "1": "2",
+    "3": 4,
+    "5": 6
+  }
+}
+
+assert {
+  1: eq 1
+  2: eq 4
+}
+
+script:pre-request {
+  const foo = "bar"
+  // console.log(foo)
+}
+
+script:post-response {
+  const foo = "bar"
+  console.log(foo)
 }
